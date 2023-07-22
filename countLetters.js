@@ -6,27 +6,29 @@ const assertEqual = function(actual, expected) {
   } else console.log(String.fromCodePoint(0x1F621) + `Assertion Failed: ${actual} !== ${expected}`);
 };
 
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
-//report back how many instances of each string were found in the allItems array of strings
 const countLetters = function(sentence, itemsToCount) {
+  const results = {} //empty object
   for (letter of sentence){
-    console.log(letter);
+    if (letter >= "a" && letter <= "z" || letter >= "A" && letter <= "Z"){
+      //console.log(letter);
+      if (isNaN(results[letter])){ // otherwise it tries to add to NaN and gets NaN
+        results[letter]=1;
+      } else {results[letter]+=1};
+      //console.log(results[letter]);
+    } 
   }
+  return results
 }
+
 
 //testcase
 
 const sentence = "CCC a bb. xyz!"
 
-const result = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-//next stage test
-//const results = {}
-//return results;
-
+const result = countLetters(sentence);
+console.log(result)
 assertEqual(result["a"], 1);
 assertEqual(result["b"], 2);
 assertEqual(result["C"], 3);
-assertEqual(result["k"], 0);
+assertEqual(result["k"], undefined);
 assertEqual(result["1"], undefined);
