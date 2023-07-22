@@ -6,10 +6,6 @@ const assertEqual = function(actual, expected) {
   } else console.log(String.fromCodePoint(0x1F621) + `Assertion Failed: ${actual} !== ${expected}`);
 };
 
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
-//report back how many instances of each string were found in the allItems array of strings
 const countLetters = function(sentence, itemsToCount) {
   const results = {} //empty object
   for (letter of sentence){
