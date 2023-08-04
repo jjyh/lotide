@@ -6,6 +6,9 @@ const eqArrays = function(array1, array2) {
   if (array1 == [] && array2 == []){
     return false;
   }
+  else if (typeof array1 == 'undefined' || typeof array2 == 'undefined'){
+    return false;
+  }
   else if (array1.length === array2.length){
     for (i=0; i<=array1.length; i++){
       if (array1[i] === array2[i]){
@@ -41,13 +44,4 @@ const middle = function(fullArray){
   //console.log(midArray)
 }
 
-//Write test assertions for the various scenarios with middle
-//test first two case returns empty
-assertArraysEqual(middle([1]), []); // => []
-//assertArraysEqual(middle([1, 2], [])); // => []
-//odd return single
-assertArraysEqual(middle([1, 2, 3]), [2]); // => [2]
-//even return two elements
-assertArraysEqual(middle([1, 2, 3, 4]), [2,3]); // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [1]); // => [3, 4]
-
+module.exports = eqArrays;
