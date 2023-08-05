@@ -45,3 +45,5 @@ const middle = function(fullArray){
 }
 
 module.exports = eqArrays;
+
+module.exports = middle;
