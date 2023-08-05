@@ -30,8 +30,6 @@ const assertEqual = function(actual, expected) {
   } else console.log(String.fromCodePoint(0x1F621) + `Assertion Failed: ${actual} !== ${expected}`);
 };
 
-
-
 // TEST CODE
 assertEqual(findKey({
   "Blue Hill": { stars: 1 },
@@ -41,3 +39,5 @@ assertEqual(findKey({
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 2), "noma"); //=> true
+
+module.exports = findKey;

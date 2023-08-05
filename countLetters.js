@@ -20,7 +20,6 @@ const countLetters = function(sentence, itemsToCount) {
   return results
 }
 
-
 //testcase
 
 const sentence = "CCC a bb. xyz!"
@@ -32,3 +31,5 @@ assertEqual(result["b"], 2);
 assertEqual(result["C"], 3);
 assertEqual(result["k"], undefined);
 assertEqual(result["1"], undefined);
+
+module.exports = countLetters;

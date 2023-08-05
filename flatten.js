@@ -20,7 +20,6 @@ const assertArraysEqual = function(array1, array2){
   } else console.log("the two arrays don't match");
 }
 
-
 const flatten = function(fullArray){
   //console.log(fullArray[2].values())
   //for (let elements of fullArray[2].values()){
@@ -41,3 +40,5 @@ const flatten = function(fullArray){
 //test
 flatten([1, 2, [3, 4], 5, [6]])
 flatten([[1], 2, [3, 4], 5, 9])
+
+module.exports = flatten;
