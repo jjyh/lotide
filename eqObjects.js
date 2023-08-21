@@ -1,5 +1,7 @@
 // take in two objects and returns true or false, based on a perfect match.
 
+const eqArrays = require('./eqArrays');
+
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(String.fromCodePoint(0x1F923) + "Assertion Passed:" + actual + "===" + expected);
@@ -23,21 +25,6 @@ const eqObjects = function(object1, object2) {
     }
   } else return false
 };
-
-const eqArrays = function(array1, array2) {
-  let matches = 0;
-  if (array1.length === array2.length){
-    for (i=0; i<=array1.length; i++){
-      if (array1[i] === array2[i]){
-      matches ++;
-      }
-    }
-    if (matches < array1.length){
-      return false;
-    } else return true;
-  } else return false;
-}
-
 
 // TEST CODE (step 3)
 const shirtObject = { color: "red", size: "medium" };
