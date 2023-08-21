@@ -1,6 +1,13 @@
 const head = function(array) {
-  let arrayFirst = array[0];
-  return arrayFirst;
+  if (array = []) { //add edge case
+    return array;
+  } 
+  else if (array.isArray() = false){
+    return undefined;
+  }
+  else {
+  return array[0];
+  }
 };
 
 module.exports = head;
