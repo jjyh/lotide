@@ -1,12 +1,7 @@
 // take in two objects and returns true or false, based on a perfect match.
 
 const eqArrays = require('./eqArrays');
-
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(String.fromCodePoint(0x1F923) + "Assertion Passed:" + actual + "===" + expected);
-  } else console.log(String.fromCodePoint(0x1F621) + `Assertion Failed: ${actual} !== ${expected}`);
-};
+const assertEqual = require('./assertEqual');
 
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
@@ -42,5 +37,11 @@ assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), tr
 
 const longSleeveMultiColorShirtObject= { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
 assertEqual(eqObjects(multiColorShirtObject  , longSleeveMultiColorShirtObject), false); // => false
+
+// re feedback - check if it fails when first item matches but second does not
+const multiColorShirtObject2 = { colors: ["red", "green"], size: "medium" };
+const anotherMultiColorShirtObject2 = { size: "medium", colors: ["red", "blue"] };
+assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), true); // => true
+
 
 module.exports = eqObjects;
