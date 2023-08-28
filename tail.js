@@ -1,14 +1,9 @@
 const tail = function(array) {
-  if (array = []) { //add edge case
+  if (array.length < 2) { //add edge case
     return array;
   } 
-  else if (array.isArray() = false){
-    return undefined;
-  }
   else {
-  let arrayTail = array.slice(1);
-  //console.log(arrayTail)
-  return arrayTail;
+    return array.slice(1);
   }
 };
 
