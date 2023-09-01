@@ -6,7 +6,4 @@ const assertArraysEqual = function(array1, array2){
   } else console.log("the two arrays don't match");
 }
 
-// //test
-// assertArraysEqual([1, 2, 3], [2, 1, 3]); // => 
-
 module.exports = assertArraysEqual;

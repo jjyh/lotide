@@ -21,7 +21,4 @@ const takeUntil = function(array, callback) {
 
 //=====
 
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
 module.exports = takeUntil;

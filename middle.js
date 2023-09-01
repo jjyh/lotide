@@ -1,8 +1,4 @@
-
 // take in arrays and return middle
-
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
 
 const middle = function(fullArray){
   let midArray = [];
@@ -14,7 +10,5 @@ const middle = function(fullArray){
   }
   return midArray;
 }
-
-module.exports = eqArrays;
 
 module.exports = middle;

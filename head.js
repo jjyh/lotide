@@ -1,13 +1,7 @@
 const head = function(array) {
-  if (array = []) { //add edge case
-    return array;
-  } 
-  else if (array.isArray() = false){
-    return undefined;
-  }
-  else {
-  return array[0];
-  }
+  if (Array.isArray(array)) {
+    return array[0]
+  } else {return undefined};
 };
 
 module.exports = head;

@@ -4,6 +4,4 @@ const assertEqual = function(actual, expected) {
   } else console.log(String.fromCodePoint(0x1F621) + `Assertion Failed: ${actual} !== ${expected}`);
 };
 
-
-
 module.exports = assertEqual;

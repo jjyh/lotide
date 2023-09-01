@@ -1,24 +1,7 @@
 // 
 const eqArrays = require('../eqArrays');
 const assertEqual = require('../assertEqual');
-
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
-const eqObjects = function(object1, object2) {
-//They have the same number of keys
-//The value for each key in one object is the same as the value for that same key in the other object
-  if((Object.keys(object1).length) === (Object.keys(object2).length)){
-    for (item of Object.keys(object1)){
-      //if key.value = searchVal then return first key
-      if (object1[item] === object2[item]){
-        return true;
-      }
-      else if (eqArrays(object1[item], object2[item]) === true){
-        return true;
-      } else return false;
-    }
-  } else return false
-};
+const eqObjects = require('../eqObjects');
 
 // FUNCTION IMPLEMENTATION
 const assertObjectsEqual = function(actual, expected) {
